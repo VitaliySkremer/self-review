@@ -2,12 +2,13 @@
   "name": "self-review",
   "type": "module",
   "private": true,
+  "homepage": "https://github.com/VitaliySkremer/self-review.git",
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@slidev/cli": "^52.0.0",
