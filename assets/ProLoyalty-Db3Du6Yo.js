@@ -1,0 +1,1 @@
+import{f as o,o as s}from"./modules/vue-BnpIP-pr.js";import{u as t}from"./slidev/context-BnTPvuEP.js";import{_ as e}from"./index-XPZdfz6F.js";const _="/self-review/assets/ProLoyalty-CSS2LJdD.svg",r={src:_,class:"loyalty"},a={__name:"ProLoyalty",setup(c){return t(),(n,p)=>(s(),o("img",r))}},f=e(a,[["__scopeId","data-v-7066fed6"]]);export{f as _};
