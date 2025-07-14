@@ -721,6 +721,9 @@ transition: slide-up
     <li v-click class="slidev-vclick-target slidev-vclick-hidden">
       Самостоятельно изучал C#, Kotlin. Планирую больше погрузиться в backend разработку на nodeJs 
     </li>
+    <li v-click class="slidev-vclick-target slidev-vclick-hidden">
+      Изучаю игровые движки для создания игр в браузере, например, threeJs и PhaserJs 
+    </li>
   </div>
 </div>
 
