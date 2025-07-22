@@ -293,7 +293,7 @@ transition: slide-up
       На проекте <ProLoyalty/> переписал и оптимизировал раздел "Редактирование Кампании"
     </p>
     <p class="paragraph">
-      Полностью пересмотрел и переписал код в разделе кампании, т.к. старая версия была не оптимизирована, на каждое действие создавалось три дополнительных модальных окна, что в будущем могло бы повлечь проблемы с производительностью. После улучшения, есть только одно модальное окно в котором рисуется нужный контент, это позволяет добавлять неограниченное количество действий без потери производительности.
+      Полностью пересмотрел и переписал код в разделе "Кампании", т.к. старая версия была не оптимизирована, на каждое действие создавалось три дополнительных модальных окна, что в будущем могло бы повлечь проблемы с производительностью. После улучшения, есть только одно модальное окно в котором рисуется нужный контент, это позволяет добавлять неограниченное количество действий без потери производительности.
     </p>
   </div>
 </div>
@@ -465,6 +465,82 @@ transition: slide-up
   .img {
     width: 100%;
     height: 170px;
+  }
+
+  .heading {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .paragraph {
+    font-size: 14px;
+  }
+</style>
+
+---
+layout: Main-layout
+transition: slide-up
+---
+
+<template #heading>
+Advent календарь
+</template>
+
+<div class="main-container">
+  <div
+    v-motion 
+    :initial="{ x: -100, y: 0, opacity: 0.5 }" 
+    :enter="{ x: 0, y: 0, opacity: 1, transition: {
+      type: 'spring',
+      damping: 10,
+      stiffness: 50,
+      mass: 2,
+    }}"
+    class="video__container"
+  >
+    <video controls autoplay muted loop>
+      <source src="/public/video/advent.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div
+    v-motion 
+    :initial="{ x: 100, y: 0, opacity: 0.5 }" 
+    :enter="{ x: 0, y: 0, opacity: 1, transition: {
+      type: 'spring',
+      stiffness: 40,
+    }}"
+  >
+    <h3 class="heading mb-6">
+      Advent календарь
+    </h3>
+    <p class="paragraph mb-2">
+      Создан тестовый телеграмм-бот, который открывает web-приложение и запрашивает контакт пользователя
+    </p>
+    <p class="paragraph mb-2">
+      Заложена FSD архитектура и проверка на её соблюдение при создании коммита
+    </p>
+    <p class="paragraph">
+      Используется игровой движок PhaserJs
+    </p>
+  </div>
+</div>
+
+<style>
+  .main-container {
+    margin: auto 0;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+  }
+
+  .video__container {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .heading {
